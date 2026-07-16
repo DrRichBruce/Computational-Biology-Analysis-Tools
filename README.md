@@ -2,7 +2,7 @@
 
 **Linear Mixed Model Collagen Analysis** is an R-based statistical workflow developed to investigate the relationship between collagen deposition, airway radius, and experimental treatment groups while accounting for repeated measurements within animals.
 
-The analysis uses linear mixed-effects modelling to characterise spatial patterns of collagen distribution and assess treatment-associated changes in tissue remodelling. A random intercept is included for animal identity to account for non-independence of repeated observations collected from the same subject. 【1-fcbb7d】
+The analysis uses linear mixed-effects modelling to characterise spatial patterns of collagen distribution and assess treatment-associated changes in tissue remodelling. A random intercept is included for animal identity to account for non-independence of repeated observations collected from the same subject. 
 
 The workflow was developed as part of translational biology research investigating airway remodelling and extracellular matrix deposition.
 
