@@ -1,49 +1,231 @@
-# Linear Mixed Model Collagen Analysis
+# Computational Biology Analysis Tools
 
-**Linear Mixed Model Collagen Analysis** is an R-based statistical workflow developed to investigate the relationship between collagen deposition, airway radius, and experimental treatment groups while accounting for repeated measurements within animals.
+**Computational Biology Analysis Tools** is a collection of R-based analytical workflows developed during translational biology research, covering statistical modelling, quantitative pathology, immunoreactivity analysis, tissue remodelling assessment, transcriptomics, and scientific visualisation.
 
-The analysis uses linear mixed-effects regression modelling to characterise spatial patterns of collagen distribution and assess treatment-associated changes in tissue remodelling. A random intercept is included for animal identity to account for non-independence of repeated observations collected from the same subject. 
+The repository contains practical examples of mixed-effects modelling, multivariate statistical analysis, histological image analysis, immunostaining quantification, RNA-seq workflows, and biological data visualisation.
 
-The workflow was developed as part of translational biology research investigating airway remodelling and extracellular matrix deposition.
+These workflows were developed to support rigorous, reproducible analysis of complex biological datasets while generating outputs suitable for publication, biological interpretation, and downstream hypothesis generation.
 
 ---
 
 ## Key Features
 
-### Mixed-Effects Modelling
-
-- Linear mixed-effects modelling using `lme4`
-- Random effects for animal-level variation
-- Fixed effects for treatment and airway radius
-- Interaction testing between treatment and radius
-
-### Biological Data Analysis
-
-- Collagen remodelling assessment
-- Airway morphometry analysis
-- Treatment-response modelling
-- Longitudinal tissue measurements
-
 ### Statistical Modelling
 
-- Polynomial modelling of radius effects
-- Interaction term evaluation
-- Model diagnostics
-- Variance partitioning
+- Linear mixed-effects models (LMER)
+- Hierarchical modelling of biological data
+- Repeated-measures analysis
+- Treatment-response modelling
+- Multivariate analysis of variance (MANOVA)
+- Confidence interval estimation
+- Effect size and model-fit evaluation
 
-### Visualisation
+### Quantitative Pathology
 
-- Treatment-specific prediction curves
-- Model-based fitted values
+- Airway remodelling analysis
+- Histological tissue quantification
+- Collagen deposition assessment
+- Extracellular matrix remodelling analysis
+- Morphometric measurement workflows
+- Image-analysis derived data interpretation
+
+### Immunoreactivity Analysis
+
+- Immunohistochemistry quantification
+- Immunofluorescence analysis
+- Biomarker intensity measurements
+- Technical replicate handling
+- Biological replicate modelling
+- Hierarchical mixed-effects analysis of image-derived datasets
+
+### Transcriptomics
+
+- RNA-seq workflow examples
+- DESeq2 analysis pipelines
+- SARTools-based differential expression analysis
+- Gene expression visualisation
+- Heatmap generation
+- Exploratory transcriptomic analysis
+
+### Scientific Visualisation
+
 - Publication-ready plots
-- Comparative treatment visualisation
+- Predicted-response curves
+- Treatment comparison plots
+- Heatmaps
+- Statistical diagnostics
+- Exploratory data visualisation
 
-### Reproducible Workflow
+### Reproducible Research
 
-- Structured data import
-- Automated prediction generation
-- Consistent modelling framework
-- Transparent analytical pipeline
+- Structured analytical workflows
+- Annotated statistical modelling examples
+- Reusable code templates
+- Research-oriented analysis pipelines
+- Transparent reporting approaches
+
+---
+
+## Repository Contents
+
+### Basic_Heatmap.R
+
+Generates clustered heatmaps from gene expression datasets.
+
+#### Typical Applications
+
+- RNA-seq visualisation
+- Differential expression exploration
+- Gene clustering
+- Sample quality assessment
+- Exploratory transcriptomics
+
+#### Key Features
+
+- Log-transformed expression visualisation
+- Hierarchical clustering
+- Custom colour palettes
+- Publication-quality heatmaps
+
+---
+
+### MANOVA.R
+
+Performs multivariate analysis of variance (MANOVA) across multiple biological outcomes simultaneously.
+
+#### Typical Applications
+
+- Histology studies
+- Multi-endpoint biological experiments
+- Treatment effect assessments
+- Tissue-remodelling studies
+
+#### Why Use MANOVA?
+
+Biological systems often generate several related outcome variables. MANOVA allows these outcomes to be analysed together rather than performing multiple independent tests, reducing false-positive findings and improving statistical interpretation.
+
+---
+
+### linear_mixed_model_collagen_analysis.R
+
+A mixed-effects modelling workflow designed to investigate collagen deposition across airway dimensions while accounting for repeated measurements within animals.
+
+#### Typical Applications
+
+- Airway remodelling studies
+- Collagen quantification
+- Histological image analyses
+- Preclinical disease models
+
+#### Why Use Mixed Models?
+
+Biological datasets frequently contain multiple measurements collected from the same animal.
+
+Traditional methods assume observations are independent and can therefore inflate significance.
+
+This workflow:
+
+- Accounts for repeated sampling
+- Models biological variation between animals
+- Separates treatment effects from anatomical variation
+- Generates treatment-specific prediction curves
+
+---
+
+### remodelling_areas_analysis.R
+
+A comprehensive mixed-effects modelling workflow for quantitative tissue remodelling analysis.
+
+#### Typical Applications
+
+- Airway pathology
+- Histological remodelling studies
+- Extracellular matrix analysis
+- Morphometric measurements
+- Tissue compartment quantification
+
+#### Analytical Challenges Addressed
+
+Many pathology datasets contain:
+
+- Multiple measurements from the same animal
+- Strong airway-size dependence
+- Skewed biological measurements
+- Large biological variability
+
+To address these issues the workflow:
+
+- Log-transforms outcomes to stabilise variance
+- Mean-centres anatomical variables
+- Accounts for repeated measurements
+- Tests treatment-by-size interactions
+- Generates biologically interpretable model predictions
+
+#### Why This Matters
+
+Without accounting for airway size and repeated measures, apparent treatment effects may simply reflect differences in anatomy or sampling structure.
+
+This workflow helps isolate genuine biological effects.
+
+---
+
+### Immunoreactivity_Mixed_Effects_Analysis.R
+
+A hierarchical modelling workflow for quantitative immunostaining and image-analysis datasets.
+
+#### Typical Applications
+
+- Immunohistochemistry
+- Immunofluorescence
+- Biomarker quantification
+- Protein expression studies
+- Microscopy-based intensity analysis
+
+#### Analytical Challenges Addressed
+
+Image-analysis datasets often contain:
+
+- Biological replicates
+- Technical replicates
+- Multiple wells or fields of view
+- Non-independent observations
+
+This workflow uses mixed-effects models to separate:
+
+- Biological variation
+- Technical variation
+- Treatment-associated effects
+
+resulting in more robust statistical inference.
+
+---
+
+### RNAseq_Differential_Expression_Workflow.R
+
+An RNA-seq differential expression workflow based on the SARTools and DESeq2 framework.
+
+#### Typical Applications
+
+- Bulk RNA-seq analysis
+- Differential gene expression
+- PCA and clustering
+- Quality-control analysis
+- Transcriptomic profiling
+
+#### Included Functionality
+
+- featureCounts import
+- Differential expression analysis
+- Sample clustering
+- PCA visualisation
+- Automated reporting
+- Annotated result export
+
+#### Note
+
+This workflow is based on established SARTools and DESeq2 methodologies and was adapted from training materials before being applied to transcriptomic research projects.
+
+The script is included as an example of a practical transcriptomic analysis workflow rather than a novel software implementation.
 
 ---
 
@@ -51,101 +233,45 @@ The workflow was developed as part of translational biology research investigati
 
 - R
 - lme4
-- Base R Graphics
-- Linear Mixed-Effects Models (LMER)
-- Statistical Modelling
-- Experimental Biology
-
----
-
-## Installation
-
-Install required packages:
-
-```r
-install.packages("lme4")
-```
-
-Load the package:
-
-```r
-library(lme4)
-```
-
-Run the analysis script:
-
-```r
-source("linear_mixed_model_collagen_analysis.R")
-```
-
----
-
-## Input Data Requirements
-
-The script expects a CSV file containing:
-
-| Variable | Description |
-|-----------|-------------|
-| Treatment | Experimental treatment group |
-| Animal | Biological replicate/animal identifier |
-| Radius | Airway radius measurement (µm) |
-| Collagen | Quantified collagen measurement |
-
----
-
-## Model Structure
-
-The primary model includes:
-
-### Fixed Effects
-
-- Treatment
-- Airway radius
-- Radius-treatment interaction
-
-### Random Effects
-
-- Animal identity
-
-Example model structure:
-
-```r
-lmer(
-  log10(Collagen + 0.01) ~
-    poly(Radius, 2) +
-    Treatment +
-    poly(Radius, 2):Treatment +
-    (1 | Animal)
-)
-```
+- lmerTest
+- dplyr
+- RColorBrewer
+- gplots
+- DESeq2
+- SARTools
+- r2glmm
 
 ---
 
 ## Use Cases
 
-This workflow is intended to support:
+This repository is intended to support:
 
-- Airway remodelling studies
-- Tissue remodelling analysis
-- Collagen quantification studies
-- Experimental treatment comparisons
-- Histological image analysis datasets
 - Translational biology research
-- Preclinical disease modelling
+- Computational biology workflows
+- Quantitative pathology
+- Histological image analysis
+- Immunostaining analysis
+- Experimental treatment evaluation
+- RNA-seq projects
+- Differential expression analysis
+- Exploratory transcriptomics
+- Scientific visualisation
 
 ---
 
 ## Design Principles
 
-This analysis workflow is based on several core principles:
+The workflows in this repository are based on several core principles:
 
-- Appropriate handling of repeated biological measurements
-- Separation of within-animal and between-animal variance
-- Transparent statistical modelling
-- Reproducible analytical workflows
-- Biologically interpretable outputs
+- Statistical transparency
+- Reproducibility
+- Biological interpretability
+- Appropriate handling of repeated observations
+- Robust modelling of hierarchical datasets
+- Clear visualisation of complex biological data
 
-The goal is to provide a robust framework for analysing complex tissue remodelling datasets while accounting for biological variability between animals.
+The goal is not to provide a software package, but rather a collection of practical analytical workflows that can be adapted to a wide variety of biological research questions.
 
 ---
 
@@ -153,12 +279,13 @@ The goal is to provide a robust framework for analysing complex tissue remodelli
 
 Planned enhancements include:
 
-- Model comparison workflows
-- Automated assumption checking
-- Confidence interval visualisation
-- Publication-quality plotting templates
-- Automated statistical reporting
-- Extended mixed-effects modelling options
+- Additional transcriptomic workflows
+- Gene set enrichment analysis examples
+- Automated model diagnostics
+- Expanded visualisation templates
+- Publication-ready figure pipelines
+- Reproducible reporting workflows
+- Machine-learning assisted biological analyses
 
 ---
 
@@ -182,4 +309,6 @@ Bristol Veterinary School
 
 ## Project Origins
 
-This workflow was developed during translational biology research investigating airway remodelling and collagen deposition. The analytical strategy evolved through iterative refinement of linear and mixed-effects models to appropriately account for repeated measurements within animals while assessing treatment-associated changes in collagen distribution. 【1-fcbb7d】
+These workflows were developed during translational biology research during my PhD investigating the effects of negative allosteric modulators of the calcium-sensing receptor on airway remodelling, extracellular matrix deposition, tissue pathology, immunoreactivity, and transcriptomic changes associated with disease processes in vivo and in vitro.
+
+The repository combines statistical and computational approaches used to analyse, model, visualise, and interpret complex biological datasets generated from experimental studies. Some workflows were developed directly during research projects, while others represent adapted applications of established analytical frameworks used in computational biology and bioinformatics.
